@@ -13,7 +13,7 @@ def message(update: Update, context: CallbackContext) -> None:
     query = ("SELECT text FROM info WHERE number = %s")
     cursor.execute(query, (update.message.text, ))
     for (text, ) in cursor:
-        update.message.reply_text(text)
+        update.message.reply_text(text, parse_mode='MarkdownV2')
     cnx.close()
 
 updater = Updater('1095748137:AAHD7bSb_zyOkc04ixncG7h-obsqYhalxSE')
