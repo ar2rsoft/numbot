@@ -32,7 +32,7 @@ def message(update: Update, context: CallbackContext) -> None:
     ]
 
     reply_markup = InlineKeyboardMarkup(keyboard)
-    update.message.reply_html('test', reply_markup=reply_markup)
+    update.message.reply_text('test', reply_markup=reply_markup)
 #     cnx.close()
 
 updater = Updater('1095748137:AAHD7bSb_zyOkc04ixncG7h-obsqYhalxSE')
